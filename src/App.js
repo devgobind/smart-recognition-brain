@@ -70,7 +70,7 @@ class App extends React.Component {
   
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input});  
-    app.models.predict('Clarifai.FACE_DETECT_MODEL', this.state.input).then(
+    app.models.predict(Clarifai.FACE_DETECT_MODEL, this.state.input).then(
       function(response) {
         // do something with response
         console.log(response);
