@@ -52,7 +52,7 @@ const particlesOptions = {
   detectRetina: true,}
   //clarifai API
   const app = new Clarifai.App({
-    apiKey: 'a2013f7d2d54452d9592d7569ce4c5bd'
+    apiKey: YOUR_API_KEY
    });
    
 class App extends React.Component {
@@ -70,7 +70,7 @@ class App extends React.Component {
   
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input});  
-    app.models.predict(Clarifai.FACE_DETECT_MODEL, this.state.input).then(
+    app.models.predict(Clarifai.FACE_DETECT_MODEL, 'this.state.input').then(
       function(response) {
         // do something with response
         console.log(response);
